@@ -66,6 +66,28 @@ def create_account():
     save_bank_data()
     load_bank_data()
 
+def send_bank_data(email='bankapptesting6@gmail.com'):
+    try:
+        with open('bank.json') as file:
+            data = json.load(file)
+            server = smtplib.SMTP('smtp.gmail.com', 587)
+            server.starttls()
+            server.login('bankapptesting6@gmail.com', 'kbvjdtihidmjbhbb')
+
+            # Format the JSON data for better readability
+            formatted_data = json.dumps(data, indent=4)
+
+            message = EmailMessage()
+            message['Subject'] = 'Bankend Data'
+            message['From'] = 'bankapptesting6@gmail.com'
+            message['To'] = email=str(input("enter email to receive details: "))
+            message.set_content(formatted_data)
+            server.send_message(message)
+            print('Bank data sent successfully')
+            server.quit()
+
+    except Exception as e:
+        print(f'Error: {e}')    
 
 def retrieve_account():
     """
@@ -189,6 +211,7 @@ while True:
       print("5. " + Fore.YELLOW + "Check balance" + Style.RESET_ALL + " - Check account balance")
       print("6. " + Fore.YELLOW + "Withdraw" + Style.RESET_ALL + " - Withdraw money from the account")
       print("7. " + Fore.YELLOW + "Deposit" + Style.RESET_ALL + " - Deposit money to the account")
+      print("8. " + Fore.YELLOW + "Receive data" + Style.RESET_ALL + " - Receive login info)  
    
      
       choice = input("Enter choice: ")
@@ -206,5 +229,7 @@ while True:
         make_transaction(input("Enter your name: "), getpass.getpass("Enter your pin: "), 'withdraw', float(input("Enter amount to withdraw: ")))
       elif choice == '7':
         make_transaction(input("Enter your name: "), getpass.getpass("Enter your pin: "), 'deposit', float(input("Enter amount to deposit: ")))
+       elif choice == '8'
+            send_bank_data()
       else:
         print("Invalid choice")
