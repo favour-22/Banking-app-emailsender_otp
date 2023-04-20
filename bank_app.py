@@ -49,7 +49,7 @@ def create_account():
     send_otp(f"{first_name} {last_name}", email, otp)
 
     # Ask the user to enter the OTP
-    entered_otp = input("Enter the OTP sent to your email: ")
+    entered_otp = input("Enter the OTP sent to your email(check spam ): ")
     if int(entered_otp) != otp:
         print("Error: Invalid OTP")
         return
@@ -60,6 +60,7 @@ def create_account():
     bank[first_name] = account
     print(f"Account created for {first_name} {last_name}")
     save_bank_data()
+    load_bank_data()
 
 
 def retrieve_account():
@@ -78,6 +79,7 @@ def retrieve_account():
             account['time_logged_in'] = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
             print(f"Welcome, { first_name}! Your balance is {account['balance']}")
             save_bank_data()
+            load_bank_data()
     else:
         print("Invalid name or pin")
 
@@ -95,6 +97,7 @@ def make_transaction( first_name, pin, transaction_type, amount):
             account['balance'] += amount
             print(f"Deposit successful. Your new balance is {account['balance']}")
             save_bank_data()
+            load_bank_data()
         else:
             print("Invalid transaction type")
     else:
@@ -144,6 +147,7 @@ def logout():
         account['time_logged_in'] = None
         print(f"Logged out at {datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
         save_bank_data()
+        load_bank_data()
     else:
         print("You are not logged in")
 
@@ -168,7 +172,7 @@ def load_bank_data():
 
 
 # Load bank data from file
-load_bank_data()
+#load_bank_data()
 
 
 while True:
@@ -179,6 +183,7 @@ while True:
       print("5. check_balnce")
       print("6. withdraw")
       print("7. deposite")
+   
      
       choice = input("Enter choice: ")
       if choice == '1':
@@ -197,4 +202,3 @@ while True:
         make_transaction(input("Enter your name: "), getpass.getpass("Enter your pin: "), 'deposit', float(input("Enter amount to deposit: ")))
       else:
         print("Invalid choice")
-
