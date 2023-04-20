@@ -9,7 +9,7 @@
 ```https://github.com/favour-22/Banking_app_otp.git```
 
 ## Next, install the dependencies by running:
-```pip install getpass #RRGGBB```
+```pip install getpass ```
 
 ## Usage
 To run the Bank App, enter the following command in your terminal:
@@ -35,11 +35,27 @@ This will start the CLI interface, where you will be prompted to choose an optio
 
 - Deposit money: deposits money to the user's account.
 
+![otp](https://user-images.githubusercontent.com/105045421/233453994-70fb61b8-a740-4374-8de8-e2d35b741814.PNG)
+
+- Images form the bank app 
+
+![otp2](https://user-images.githubusercontent.com/105045421/233454065-da2a46fc-ae36-482f-b398-3e122372afdb.PNG)
+
+## Contributing
+```If you are interested in contributing to this bank app code, there are several ways you can get involved. You can start by exploring the codebase and identifying any areas that could be improved or optimized. You can also review open issues or pull requests on the project's GitHub repository and provide feedback or suggestions.```
+```Additionally, you can contribute to the project by writing new tests, improving existing tests, or creating new features. If you have any questions or need help getting started, reach out to me on Gmail @ anointed657@gmail.com)``` .``` Every contribution, no matter how small, can make a big difference in improving the quality and functionality of the bank app code.```
+
+- In addition to being able to contribute to this bank app codebase, there are also exciting new features coming soon. 
+- Users will soon be able to request their account details. 
+- reset their PIN. 
+- retrieve their login information, and much more. 
+- This is an excellent opportunity for developers to get involved and contribute to a growing project.
 
 # Authors
-Favour Mogbonjubola  - Initial work - [My profile ](https://github.com/favour-22/Banking_app_otp)
-
+Favour Mogbonjubola  - Initial work - [My Bank_app ](https://github.com/favour-22/Banking_app_otp)
 
 ### Acknowledgments.
+
+
 
 
