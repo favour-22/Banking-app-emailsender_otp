@@ -19,22 +19,21 @@ To run the Bank App, enter the following command in your terminal:
 This will start the CLI interface, where you will be prompted to choose an option from the menu.
 
 ## Menu options:
-Create account : creates a new bank account for the user.
+- Create account : creates a new bank account for the user.
 
--Retrieve account: retrieves an existing bank account for the user.
+* Retrieve account: retrieves an existing bank account for the user.
 
--Logout: logs the user out of their account.
+- Logout: logs the user out of their account.
 
--Exit: exits the Bank App.
+- Exit: exits the Bank App.
 
-Check balance: checks the balance for the user.
+- Check balance: checks the balance for the user.
 
-Add money: adds money to the user's account.
+- Add money: adds money to the user's account.
 
-Withdraw money: withdraws money from the user's account.
+- Withdraw money: withdraws money from the user's account.
 
-Deposit money: deposits money to the user's account.
-
+- Deposit money: deposits money to the user's account.
 
 
 # Authors
