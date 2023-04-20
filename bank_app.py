@@ -66,7 +66,7 @@ def retrieve_account():
     """
     Retrieve an existing account for the user
     """
-    name = input("Enter your first name: ")
+    first_name = input("Enter your first name: ")
     pin = getpass.getpass("Enter your pin: ")
 
     account = bank.get(first_name)
@@ -105,7 +105,7 @@ def check_balance():
     """
     Check the balance for the user
     """
-    name = input("Enter your first name: ")
+    first_name = input("Enter your first name: ")
     pin = getpass.getpass("Enter your pin: ")
 
     account = bank.get(first_name)
@@ -168,7 +168,7 @@ def load_bank_data():
 
 
 # Load bank data from file
-#load_bank_data()
+load_bank_data()
 
 
 while True:
