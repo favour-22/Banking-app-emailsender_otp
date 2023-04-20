@@ -11,11 +11,16 @@ def send_otp(name, email, otp):
     """
     Send an OTP to the user's email
     """
+<<<<<<< HEAD:main_bank.py
     from_email = "bankapptesting6@gmail.com"  # Replace with your email address
     from_password = "kbvjdtihidmjbhbb"  # Replace with your email password
+=======
+    from_email = "bankapptesting6@gmail.com" 
+    from_password = "bankapp@121"  
+>>>>>>> 8ea99a99b0b9afbd9473d50406b2988cbb5a0197:bank_app.py
 
     subject = "One-Time Password (OTP) for your new bank account"
-    body = f"Hello {name},\n\nYour OTP is {otp}.\n\nPlease enter this OTP in the bank app to complete your account creation.\n\nThank you,\nThe Bank"
+    body = f"Hello {name},\n\nYour OTP is {otp}.\n\nPlease enter this OTP in the bank app to complete your account creation.\n\nThank you,\nFavour.M{bank Manager]"
 
     message = f"Subject: {subject}\n\n{body}"
 
@@ -176,7 +181,6 @@ while True:
       print("3. Logout")
       print("4. Exit")
       print("5. check_balnce")
-      #print("6. add_money")
       print("6. withdraw")
       print("7. deposite")
      
