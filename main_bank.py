@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 import getpass
 import datetime
 import json
@@ -11,7 +12,7 @@ def send_otp(name, email, otp):
     Send an OTP to the user's email
     """
     from_email = "bankapptesting6@gmail.com"  # Replace with your email address
-    from_password = "bankapp@121"  # Replace with your email password
+    from_password = "kbvjdtihidmjbhbb"  # Replace with your email password
 
     subject = "One-Time Password (OTP) for your new bank account"
     body = f"Hello {name},\n\nYour OTP is {otp}.\n\nPlease enter this OTP in the bank app to complete your account creation.\n\nThank you,\nThe Bank"
@@ -196,3 +197,4 @@ while True:
         make_transaction(input("Enter your name: "), getpass.getpass("Enter your pin: "), 'deposit', float(input("Enter amount to deposit: ")))
       else:
         print("Invalid choice")
+
