@@ -56,9 +56,9 @@ def create_account():
 
     balance = 0
     time_logged_in = None
-   account = {'first_name': first_name, 'last_name': last_name, 'email': email, 'pin': pin, 'balance': balance, 'time_logged_in': time_logged_in}}
-    bank[name] = account
-     print(f"Account created for {first_name} {last_name}")
+    account = {'first_name': first_name, 'last_name': last_name, 'email': email, 'pin': pin, 'balance': balance, 'time_logged_in': time_logged_in}
+    bank[first_name] = account
+    print(f"Account created for {first_name} {last_name}")
     save_bank_data()
 
 
