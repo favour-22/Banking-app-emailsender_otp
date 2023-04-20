@@ -33,7 +33,9 @@ def create_account():
     """
     Create a new account for the user
     """
-    name = input("Enter your name: ")
+ 
+    first_name = input("Enter your first name: ")
+    last_name = input("Enter your last name: ")
     email = input("Enter your email: ")
     pin = getpass.getpass("Enter a 4-digit pin: ")
 
@@ -44,7 +46,7 @@ def create_account():
 
     # Generate an OTP and send it to the user's email
     otp = random.randint(1000, 9999)
-    send_otp(name, email, otp)
+    send_otp(f"{first_name} {last_name}", email, otp)
 
     # Ask the user to enter the OTP
     entered_otp = input("Enter the OTP sent to your email: ")
@@ -54,9 +56,9 @@ def create_account():
 
     balance = 0
     time_logged_in = None
-    account = {'name': name, 'email': email, 'pin': pin, 'balance': balance, 'time_logged_in': time_logged_in}
+   account = {'first_name': first_name, 'last_name': last_name, 'email': email, 'pin': pin, 'balance': balance, 'time_logged_in': time_logged_in}}
     bank[name] = account
-    print(f"Account created for {name}")
+     print(f"Account created for {first_name} {last_name}")
     save_bank_data()
 
 
@@ -64,23 +66,23 @@ def retrieve_account():
     """
     Retrieve an existing account for the user
     """
-    name = input("Enter your name: ")
+    name = input("Enter your first name: ")
     pin = getpass.getpass("Enter your pin: ")
 
-    account = bank.get(name)
+    account = bank.get(first_name)
 
     if account and account['pin'] == pin:
         if account['time_logged_in']:
             print(f"You are already logged in at {account['time_logged_in']}")
         else:
             account['time_logged_in'] = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-            print(f"Welcome, {name}! Your balance is {account['balance']}")
+            print(f"Welcome, { first_name}! Your balance is {account['balance']}")
             save_bank_data()
     else:
         print("Invalid name or pin")
 
-def make_transaction(name, pin, transaction_type, amount):
-    account = bank.get(name)
+def make_transaction( first_name, pin, transaction_type, amount):
+    account = bank.get( first_name)
     if account and account['pin'] == pin:
         if transaction_type == 'withdraw':
             if account['balance'] < amount:
@@ -103,10 +105,10 @@ def check_balance():
     """
     Check the balance for the user
     """
-    name = input("Enter your name: ")
+    name = input("Enter your first name: ")
     pin = getpass.getpass("Enter your pin: ")
 
-    account = bank.get(name)
+    account = bank.get(first_name)
 
     if account and account['pin'] == pin:
         print(f"Your balance is {account['balance']}")
@@ -118,7 +120,7 @@ def add_money():
     """
     Add money to the user's account
     """
-    name = input("Enter your name: ")
+    name = input("Enter your first name: ")
     pin = getpass.getpass("Enter your pin: ")
 
     account = bank.get(name)
@@ -135,7 +137,7 @@ def logout():
     """
     Log out the user from their account
     """
-    name = input("Enter your name: ")
+    name = input("Enter your first name: ")
     account = bank.get(name)
 
     if account and account['time_logged_in']:
