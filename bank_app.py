@@ -4,6 +4,10 @@ import datetime
 import json
 import random
 import smtplib
+import colorama
+from colorama import Fore, Style
+
+colorama.init(autoreset=True)
 
 bank = {}
 
@@ -176,13 +180,15 @@ def load_bank_data():
 
 
 while True:
-      print("1. Create account")
-      print("2. Retrieve account")
-      print("3. Logout")
-      print("4. Exit")
-      print("5. check_balnce")
-      print("6. withdraw")
-      print("7. deposite")
+      print(Fore.GREEN + "Welcome to our Bank App!" + Style.RESET_ALL)
+      print(Fore.BLUE + "Please select an option:")
+      print("1. " + Fore.YELLOW + "Create a new account" + Style.RESET_ALL + " - Create a new bank account")
+      print("2. " + Fore.YELLOW + "Retrieve account" + Style.RESET_ALL + " - Retrieve an existing account using account number")
+      print("3. " + Fore.YELLOW + "Logout" + Style.RESET_ALL + " - Log out from the current account")
+      print("4. " + Fore.YELLOW + "Exit" + Style.RESET_ALL + " - Exit the bank app")
+      print("5. " + Fore.YELLOW + "Check balance" + Style.RESET_ALL + " - Check account balance")
+      print("6. " + Fore.YELLOW + "Withdraw" + Style.RESET_ALL + " - Withdraw money from the account")
+      print("7. " + Fore.YELLOW + "Deposit" + Style.RESET_ALL + " - Deposit money to the account")
    
      
       choice = input("Enter choice: ")
