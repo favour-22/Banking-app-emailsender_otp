@@ -1,9 +1,9 @@
 # Bank App
 
-## This is a simple command line interface (CLI) application that simulates a bank account. Users can create a new account, retrieve an existing account, log in and log out, deposit or withdraw money, check their balance, and add money to their account.
+### This is a simple command line interface (CLI) application that simulates a bank account. Users can create a new account, retrieve an existing account, log in and log out, deposit or withdraw money, check their balance, and add money to their account.
 
 # Getting started
- ###To use the Bank App, you will need Python 3 installed on your machine. Clone this repository to your local machine and navigate to the directory in your terminal.
+ ### To use the Bank App, you will need Python 3 installed on your machine. Clone this repository to your local machine and navigate to the directory in your terminal.
  
  
 ```https://github.com/favour-22/Banking_app_otp.git```
@@ -19,20 +19,13 @@ To run the Bank App, enter the following command in your terminal:
 This will start the CLI interface, where you will be prompted to choose an option from the menu.
 
 ## Menu options:
-|Create account|  
-|--------------|
-|creates a new bank account for the user.|
+Create account : creates a new bank account for the user.
 
-|Retrieve account:|  
-|-----------------|
-| retrieves an existing bank account for the user.|
+-Retrieve account: retrieves an existing bank account for the user.
 
+-Logout: logs the user out of their account.
 
-
-
-Logout: logs the user out of their account.
-
-Exit: exits the Bank App.
+-Exit: exits the Bank App.
 
 Check balance: checks the balance for the user.
 
