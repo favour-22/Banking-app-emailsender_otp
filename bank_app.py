@@ -211,7 +211,7 @@ while True:
       print("5. " + Fore.YELLOW + "Check balance" + Style.RESET_ALL + " - Check account balance")
       print("6. " + Fore.YELLOW + "Withdraw" + Style.RESET_ALL + " - Withdraw money from the account")
       print("7. " + Fore.YELLOW + "Deposit" + Style.RESET_ALL + " - Deposit money to the account")
-      print("8. " + Fore.YELLOW + "Receive data" + Style.RESET_ALL + " - Receive login info)  
+      print("8. " + Fore.YELLOW + "Receive data" + Style.RESET_ALL + " - Receive login info")  
    
      
       choice = input("Enter choice: ")
@@ -229,7 +229,7 @@ while True:
         make_transaction(input("Enter your name: "), getpass.getpass("Enter your pin: "), 'withdraw', float(input("Enter amount to withdraw: ")))
       elif choice == '7':
         make_transaction(input("Enter your name: "), getpass.getpass("Enter your pin: "), 'deposit', float(input("Enter amount to deposit: ")))
-       elif choice == '8'
-            send_bank_data()
+      elif choice == '8':
+          send_bank_data()
       else:
         print("Invalid choice")
