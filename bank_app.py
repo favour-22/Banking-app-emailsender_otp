@@ -6,6 +6,7 @@ import random
 import smtplib
 import colorama
 from colorama import Fore, Style
+from email.message import EmailMessage
 
 colorama.init(autoreset=True)
 
