@@ -17,7 +17,7 @@ def send_otp(name, email, otp):
     Send an OTP to the user's email
     """
     from_email = "bankapptesting6@gmail.com"
-    from_password = ""  
+    from_password = ""#fix----  
     subject = "One-Time Password (OTP) for your new bank account"
     body = f"Hello {name},\n\nYour OTP is {otp}.\n\nPlease enter this OTP in the bank app to complete your account creation.\n\nThank you,\nFavour.M-bank Manager"
 
